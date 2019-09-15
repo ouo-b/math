@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>이번 달 내 알바비는 얼마일까...</title>
+	<style type="text/css">
+		div{margin:auto; text-align: center; width: 800px}
+		h1{padding-top: 100px}
+		img{display: block;}
+		#money{ font-size: 20px; 
+					padding: 10px;
+					border: none;
+					box-shadow: 0px 0px 5px inset;
+					margin:auto;
+					display: block;
+					border-radius: 4px;
+					margin-top: 50px;}
+		#time{ font-size: 20px; 
+					padding: 10px;
+					border: none;
+					box-shadow: 0px 0px 5px inset;
+					margin:auto;
+					display: block;
+					border-radius: 4px;
+					margin-top: 50px;}
+		#date{ font-size: 20px; 
+					padding: 10px;
+					border: none;
+					box-shadow: 0px 0px 5px inset;
+					margin:auto;
+					display: block;
+					border-radius: 4px;
+					margin-top: 50px;}
+
+	</style>
+</head>
+<body>
+	<div>
+		<img src="돈.png">
+		<h1>이번달은 얼마 벌었니?</h1>
+		<input type="text" placeholder="시급" id="money">
+		<div id="mmo"></div>
+		<input type="text" placeholder="하루 근무시간" id="time">
+		<div id="tmo"></div>
+		<input type="text" placeholder="한주 근무일수" id="date">
+		<div id="dmo"></div>
+		<br><br>
+		<input type="button" placeholder="확인" id="ok"></div>
+		<br><br>
+		
+
+		<div id="monitor">당신은 0원을 벌었을까요?</div>
+
+		<script type="text/javascript">
+		money.oninput = function(){
+			mmo.innerHTML = money.value;
+			var month = (money.value*time.value*date.value);
+			var month = Math.round(money.value*time.value*date.value);
+			monitor.innerHTML = 
+			"당신은" + month + "만큼 벌으셨네요 고생했어요";
+		}
+		
+				time.oninput = function(){
+			tmo.innerHTML = time.value;
+			var month = (money.value*time.value*date.value);
+			var month = Math.round(money.value*time.value*date.value);
+			monitor.innerHTML = 
+			"당신은" + month + "만큼 벌으셨네요 고생했어요";
+		}
+
+				date.oninput = function(){
+			dmo.innerHTML = date.value;
+			var month = (money.value*time.value*date.value);
+			var month = Math.round(money.value*time.value*date.value);
+			monitor.innerHTML = 
+			"당신은" + month + "만큼 벌으셨네요 고생했어요";
+		}
+		
+	</script>
+	
+</html>
